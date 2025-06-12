@@ -46,3 +46,68 @@
    height: 30%;
   width: 30%; 
 }
+
+.socialmedia{
+   height: 1px;
+  width: 1px; 
+}
+.body{
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 200px 0;
+}
+
+#parallax2 {
+  /* The image used */
+  background-image: url("Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block1.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#parallax3 {
+  /* The image used */
+  background-image: url("Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block3.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#parallax4{
+  /* The image used */
+  background-image: url("Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block1.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#parallax5{
+  /* The image used */
+  background-image: url("Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block3.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
