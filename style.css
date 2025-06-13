@@ -111,3 +111,25 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.containerA{
+  justify-content: center;
+}
+#features{
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 200px 0;
+  justify-content: center;
+}
+/* .card{
+  justify-content: center;
+  text-align: center;
+} */
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* space between cards */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
