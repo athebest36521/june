@@ -7,17 +7,14 @@ let FeatureProducts = [
     price: 24.99,
     image: "train.jpg",
     description: "Handcrafted birch train with wheels."
-  }
-    
-    ,
-    
-      {
+  },
+  {
     name: "Wooden Train2",
     price: 24.99,
     image: "train.jpg",
     description: "Handcrafted birch train with wheels."
   },
-    
+
   {
     name: "Wooden Train3",
     price: 24.99,
@@ -206,7 +203,7 @@ let FeatureProducts = [
                   <img src="${p.image}" class="card-img-top" alt="${p.name}" />
                  
                  <div class="card-body">
-                    <h5 class="card-title"> ${ p.name  } </h5>
+                    <h5 class="card-title"> ${p.name} </h5>
                     
                     <p class="card-text">
                       ${p.price}
