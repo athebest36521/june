@@ -1,3 +1,5 @@
+
+//products
 let FeatureProducts = [
 
   {
@@ -56,6 +58,43 @@ let FeatureProducts = [
     
   
   ]
+  
+  
+  
+  
+  //reviews
+  let reviews = [
+    {
+    name: "Samantha",
+    image: "...",
+    review: "Beautiful craftsmanship!",
+    rating: 5
+  },
+         {
+    name: "Samantha",
+    image: "...",       
+    review: "Beautiful craftsmanship!",
+    rating: 5
+  },
+  {
+    name: "Samantha",
+    image: "...",
+    review: "Beautiful craftsmanship!",
+    rating: 5
+  },
+    {
+    name: "Samantha",
+    image: "...",  
+    review: "Beautiful craftsmanship!",
+    rating: 5
+  }
+        
+                 
+  ]
+  
+  
+  
+  
   
   const form = document.getElementById("form");
   const result = document.getElementById("result");
@@ -207,6 +246,11 @@ let FeatureProducts = [
            
       );
   
+  
+  
+  
+  
+  
   //function is called from the button to display the player's information
   function seeMore(productID) {
       // Find the player from your array using the ID
@@ -227,6 +271,131 @@ let FeatureProducts = [
   
   
   
+  
+  
+  //populate reviews
+  const array = document.getElementById('allreviews') // container for all product cards
+  
+     // Fail-safe: exit if the roster container is missing
+    
+  
+     // ----- Function to render the roster -----
+  
+     //loads the content to the page
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      //if the grid does not exist, an error is displayed to the console
+      if (!array) {
+        console.error("Could not find #reviews in the DOM.");
+        return;
+      }
+  
+      array.innerHTML = ""; // clear current roster
+      
+      //iterates the cards from the players list and adds it to the page
+      reviews.forEach((p) => {
+        const col = document.createElement("div");
+        //col.className = "col-6 col-sm-5"; // responsive grid: 2 per row on mobile, 5 per row on desktop
+        col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+  
+        // Inject card HTML using Bootstrap classes
+        //content of the card
+        col.innerHTML = `
+        
+        
+             
+        
+        
+            <div class="col-md-3 mb-4">
+                <div class="card">
+               
+                <img src="${p.image}" class="card-img-top" alt="${p.review}>
+               
+                 <div class="card-body">
+                    <h5 class="card-title" >
+                    ${ p.name}
+                    </h5>
+                    
+                    <p class="card-text">
+                      ${p.review}
+                    </p>
+                    
+                    
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    
+                   <button class="btn-warning" onClick="seeMore('${p.review}-${p.rating}')">More Info</button>
+               
+               <div id='${p.review}-${p.rating}' style="display:none">
+               
+              
+               <p class="card-text">
+                     ${p.rating}
+                    </p>
+               
+               </div>   
+                    
+                  </div>
+                </div>
+              </div>
+      
+           
+           `
+  
+         // Add the card to the grid
+         array.appendChild(col)
+       })
+     }
+           
+      );
+  
+  /*
+  <div class="col-md-3 mb-4">
+                <div class="card">
+                  
+                  <img src="${p.image}" class="card-img-top" alt="${p.name}" />
+                 
+                 <div class="card-body">
+                    <h5 class="card-title"> ${ p.name  } </h5>
+                    
+                    <p class="card-text">
+                      ${p.price}
+                    </p>
+                    
+                    
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    
+                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}')">More Info</button>
+               
+               <div id='${p.name}-${p.price}' style="display:none">
+               
+              
+               <p class="card-text">
+                     ${p.description}
+                    </p>
+               
+               </div>   
+                    
+                  </div>
+                </div>
+              </div>
+  
+  */
+  
+  
+  
+  
+  //function is called from the button to display the player's information
+  function morereviews(reviewID) {
+      // Find the player from your array using the ID
+      const review = reviews.find(p => `${p.review}-${p.rating}` === reviewID);
+  
+      if (!review) {
+          console.error("Review not found!");
+          return;
+      }
+  }
   
   
   
