@@ -1,4 +1,4 @@
-
+//all the lists=======================================
 //products
 let FeatureProducts = [
 
@@ -92,24 +92,40 @@ let reviews = [
 let TopItems = [
   {
     name: "Car",
-    price: 243.99,
+    price: "$9.99",
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/car1.jpg",
     description: "Handcrafted birch car with wheels."
   },
   {
     name: "Plane",
-    price: 999999999.99,
+    price: '$999999999.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    description: "Handcrafted birch plane with wheels and wings."
+  },
+    {
+    name: "Plane",
+    price: '$999999999.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    description: "Handcrafted birch plane with wheels and wings."
+  },
+    {
+    name: "Plane",
+    price: '$999999999.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch plane with wheels and wings."
   }
+  
+  
 ]
 
 
 
 
 
-const form = document.getElementById("form");
-const result = document.getElementById("result");
+
+
+// const form = document.getElementById("form");
+// const result = document.getElementById("result");
 /*
 form.addEventListener("submit", function (e) {
   const formData = new FormData(form);
@@ -156,23 +172,24 @@ form.addEventListener("submit", function (e) {
  
 */
 
-function search() {
-  let s = document.getElementById("sr").value;
-  //if s contains "about", "contact", "home", or "shop", go to the page
-  /*
-  if (s=="about" || s == "contact" ||s=="home" ||  s=="shop" ){
-    var pg=  "https://junetoycompfinal.glitch.me/"  + s + ".html" ;
+
+// function search() {
+//   let s = document.getElementById("sr").value;
+//   //if s contains "about", "contact", "home", or "shop", go to the page
+//   /*
+//   if (s=="about" || s == "contact" ||s=="home" ||  s=="shop" ){
+//     var pg=  "https://junetoycompfinal.glitch.me/"  + s + ".html" ;
     
-    window.location.href=pg;
-  }
-    //otherwise, tell the user that the page does not exist.
-  else{
+//     window.location.href=pg;
+//   }
+//     //otherwise, tell the user that the page does not exist.
+//   else{
   
-    alert("404 This Page Doesn't Exist");
+//     alert("404 This Page Doesn't Exist");
   
-  }
-  */
-}
+//   }
+//   */
+// }
 
 
 
@@ -259,9 +276,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Could not find #topItems in the DOM.");
     return;
   }
+  
+  grid2.innerHTML=""
+  
+  
   TopItems.forEach((p) => {
     const col = document.createElement("div");
-    grid2.innerHTML = "";
+  
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
     // Inject card HTML using Bootstrap classes
@@ -298,10 +319,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                   </div>
                 </div>
-              </div> */`
-
+              </div> `
+    
+    
+   grid2.appendChild(col)
   })
-})
+});
 
 
 
@@ -318,12 +341,14 @@ function seeMore(productID) {
   }
 
   // Populate the modal with player data
-  //document.getElementById("title").textContent = `${player.firstname} ${player.lastname}`;
+  document.getElementById("title").textContent = `${product.name} ${product.price}`;
+  document.getElementById("description").textContent = `${product.description}`;
 
   // Show the Bootstrap modal
-  //const modal = new bootstrap.Modal(document.getElementById("modal"));
-  //modal.show();
+  const modal = new bootstrap.Modal(document.getElementById("modal"));
+  modal.show(FeatureProducts);
 }
+
 
 
 
@@ -365,7 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-md-3 mb-4">
                 <div class="card">
                
-                <img src="${p.image}" class="card-img-top" alt="${p.review}>
+                <img src="${p.image}" class="card-img-top" alt="${p.review}">
                
                  <div class="card-body">
                     <h5 class="card-title" >
@@ -380,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                     
-                   <button class="btn-warning" onClick="seeMore('${p.review}-${p.rating}')">More Info</button>
+                   <button class="btn-warning" onClick="morereviews('${p.review}-${p.rating}')">More Info</button>
                
                <div id='${p.review}-${p.rating}' style="display:none">
                
@@ -405,37 +430,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 );
 
-/*
-<div class="col-md-3 mb-4">
-              <div class="card">
-                
-                <img src="${p.image}" class="card-img-top" alt="${p.name}" />
-               
-               <div class="card-body">
-                  <h5 class="card-title"> ${ p.name  } </h5>
-                  
-                  <p class="card-text">
-                    ${p.price}
-                  </p>
-                  
-                  
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                  
-                 <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}')">More Info</button>
-             
-             <div id='${p.name}-${p.price}' style="display:none">
-             
-            
-             <p class="card-text">
-                   ${p.description}
-                  </p>
-             
-             </div>   
-                  
-                </div>
-              </div>
-            </div> */
 
 
 
@@ -450,4 +444,13 @@ function morereviews(reviewID) {
     console.error("Review not found!");
     return;
   }
+  
+  document.getElementById("title").textContent = `${review.name} ${review.rating}`;
+  document.getElementById("description").textContent = `${review.review}`;
+
+  // Show the Bootstrap modal
+  const modal = new bootstrap.Modal(document.getElementById("modal"));
+  modal.show(FeatureProducts);
+
+  
 }

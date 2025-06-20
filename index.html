@@ -21,6 +21,8 @@
 
     <!-- The website JavaScript file -->
   </head>
+  
+  
 
   <!-- header -->
   <header>
@@ -112,13 +114,7 @@ Contact Page
 
     <!--  featured items to buy -->
     <section id="features" class="pg-section">
-      <div class="card text-center">
-       
-          
-          
-          
-          
-        </div>
+
         
         
         <h1>
@@ -126,7 +122,7 @@ Contact Page
         </h1>
         
         <!-- use js to populate -->
-        <div class="row g-1" id="featuredproducts"></div>
+        <div class="row g-1" id="featuredproducts">
           
           
           
@@ -139,7 +135,7 @@ Contact Page
         
         
         
-      </div>
+      
       
     </section>
 
@@ -148,42 +144,7 @@ Contact Page
         <h1>
           Top Items
         </h1>
-      <!-- <div class="card text-center">
-        <h1>Top Items</h1>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card’s content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card’s content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card’s content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div> -->
+
       <div class="row g-1" id="topItems">
           
           
@@ -345,7 +306,33 @@ Contact Page
           </div>
         </div>
       </div>
+      
     </section>
+    
+    
+     <div id="main-content">
+        </div>
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">Player Name</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p id="description"></p>
+                       
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
   </main>
 
   <footer>
@@ -394,6 +381,7 @@ Contact Page
           <img
             class="SMI"
             src="Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/images.png">
+        </a>
       </div>
     </section>
   </footer>
