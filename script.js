@@ -4,34 +4,34 @@ let FeatureProducts = [
 
   {
     name: "Wooden Train",
-    price: 30.99,
+    price: "$30.99",
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/train1.jpg",
     description: "Handcrafted birch train with wheels."
   },
   {
     name: "Car",
-    price: 20.99,
-    image: "train2.jpg",
-    description: "Handcrafted birch train with wheels."
+    price: "$20.99",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/car1.jpg",
+    description: "Handcrafted birch car with wheels."
   },
 
   {
     name: "Boat",
-    price: 40.99,
-    image: "train3.jpg",
-    description: "Handcrafted birch train with wheels."
+    price: "$40.99",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/boat1.jpg",
+    description: "Handcrafted birch boat with rudders."
   },
   {
     name: "Plane",
-    price: 50.99,
-    image: "train4.jpg",
-    description: "Handcrafted birch train with wheels."
+    price: "$50.99",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    description: "Handcrafted birch plane with wings."
   },
   {
     name: "Blocks",
-    price: 60.99,
-    image: "train5.jpg",
-    description: "Handcrafted birch train with wheels."
+    price: "$60.99",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block1.jpg",
+    description: "Handcrafted birch blocks for anytime use."
   }
 ]
 
