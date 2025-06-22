@@ -3,57 +3,36 @@
 let FeatureProducts = [
 
   {
-    name: "Wooden Train1",
-    price: 24.99,
+    name: "Wooden Train",
+    price: 30.99,
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/train1.jpg",
     description: "Handcrafted birch train with wheels."
   },
   {
-    name: "Wooden Train2",
-    price: 24.99,
+    name: "Car",
+    price: 20.99,
     image: "train2.jpg",
     description: "Handcrafted birch train with wheels."
   },
 
   {
-    name: "Wooden Train3",
-    price: 24.99,
+    name: "Boat",
+    price: 40.99,
     image: "train3.jpg",
     description: "Handcrafted birch train with wheels."
   },
   {
-    name: "Wooden Train4",
-    price: 24.99,
+    name: "Plane",
+    price: 50.99,
     image: "train4.jpg",
     description: "Handcrafted birch train with wheels."
   },
   {
-    name: "Wooden Train5",
-    price: 24.99,
+    name: "Blocks",
+    price: 60.99,
     image: "train5.jpg",
     description: "Handcrafted birch train with wheels."
-  },
-  {
-    name: "Wooden Train6",
-    price: 24.99,
-    image: "train.jpg",
-    description: "Handcrafted birch train with wheels."
-  },
-  {
-    name: "Wooden Train7",
-    price: 24.99,
-    image: "train.jpg",
-    description: "Handcrafted birch train with wheels."
-  },
-  {
-    name: "Wooden Train8",
-    price: 24.99,
-    image: "train.jpg",
-    description: "Handcrafted birch train with wheels."
   }
-
-
-
 ]
 
 
@@ -62,25 +41,25 @@ let FeatureProducts = [
 //reviews
 let reviews = [
   {
-    name: "Samantha",
+    name: "Samantha S.",
     image: "...",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
-    name: "Samantha",
+    name: "Martha G.",
     image: "...",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
-    name: "Samantha",
+    name: "Andrew T.",
     image: "...",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
-    name: "Samantha",
+    name: "Samuel I.",
     image: "...",
     review: "Beautiful craftsmanship!",
     rating: 5
@@ -98,21 +77,21 @@ let TopItems = [
   },
   {
     name: "Plane",
-    price: '$999999999.99',
+    price: '$199.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch plane with wheels and wings."
   },
     {
-    name: "Plane",
+    name: "Boat",
     price: '$999999999.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
-    description: "Handcrafted birch plane with wheels and wings."
+    description: "Handcrafted birch boat with mast, boom, and sail."
   },
     {
-    name: "Plane",
-    price: '$999999999.99',
-    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
-    description: "Handcrafted birch plane with wheels and wings."
+    name: "Blocks",
+    price: '$99,999,999,999,999,999,999,999.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/blocks1.jpg",
+    description: "Handcrafted birch blocks for playtime anytime!"
   }
   
   
@@ -229,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     col.innerHTML = `
         
         
-            <div class="col-md-3 mb-4">
+            <div class="col-md-8 mb-4">
                 <div class="card">
                   
                   <img src="${p.image}" class="card-img-top" alt="${p.name}" />
@@ -290,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     col.innerHTML = `
         
         
-            <div class="col-md-3 mb-4">
+            <div class="col-md-8 mb-4">
                 <div class="card">
                   
                   <img src="${p.image}" class="card-img-top" alt="${p.name}" />
@@ -387,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
              
         
         
-            <div class="col-md-3 mb-4">
+            <div class="col-md-8 mb-4">
                 <div class="card">
                
                 <img src="${p.image}" class="card-img-top" alt="${p.review}">

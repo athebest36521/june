@@ -141,3 +141,12 @@
 */
 /* space between cards */
 /* allows wrapping on smaller screens */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Add spacing between cards */
+}
+
+.card {
+  box-sizing: border-box; /* Ensure padding/borders don't affect width */
+}
