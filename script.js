@@ -84,7 +84,7 @@ let TopItems = [
   {
     name: "Boat",
     price: '$999999999.99',
-    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/boat1.jpg",
     description: "Handcrafted birch boat with mast, boom, and sail."
   },
   {
@@ -99,7 +99,32 @@ let TopItems = [
 
 
 
-
+let specialDeals = [
+  {
+    name: "Car",
+    price: "$9.99",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/car1.jpg",
+    description: "Handcrafted birch car with wheels."
+  },
+  {
+    name: "Plane",
+    price: '$199.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    description: "Handcrafted birch plane with wheels and wings."
+  },
+  {
+    name: "Boat",
+    price: '$999999999.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    description: "Handcrafted birch boat with mast, boom, and sail."
+  },
+  {
+    name: "Blocks",
+    price: '$99,999,999,999,999,999,999,999.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/blocks1.jpg",
+    description: "Handcrafted birch blocks for playtime anytime!"
+  }
+]
 
 
 
@@ -224,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                     
-                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}')">More Info</button>
+                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}', 'featureProducts')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
@@ -285,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                     
-                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}')">More Info</button>
+                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}', 'topItems')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
@@ -310,9 +335,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //function is called from the button to display the player's information
-function seeMore(productID) {
+function seeMore(productID, array) {
   // Find the player from your array using the ID
-  const product = FeatureProducts.find(p => `${p.name}-${p.price}` === productID);
+  let product;
+  if (array == "featureProducts") {
+    product = FeatureProducts.find(p => `${p.name}-${p.price}` === productID);
+  }
+  else if (array == "topItems") {
+    product = TopItems.find(p => `${p.name}-${p.price}` === productID);
+  }
+  else if (array == "specialDeals") {
+    product = specialDeals.find(p => `${p.name}-${p.price}` === productID);
+  }
 
   if (!product) {
     console.error("Product not found!");
@@ -429,7 +463,69 @@ function morereviews(reviewID) {
 
   // Show the Bootstrap modal
   const modal = new bootstrap.Modal(document.getElementById("modal"));
-  modal.show(FeatureProducts);
+  modal.show();
 
 
 }
+//
+let grid3 = document.getElementById("special-deals")
+document.addEventListener("DOMContentLoaded", () => {
+
+  //if the grid does not exist, an error is displayed to the console
+  if (!grid3) {
+    console.error("Could not find #special deals in the DOM.");
+    return;
+  }
+
+  grid3.innerHTML = ""; // clear current roster
+
+  //iterates the cards from the list and adds it to the page
+  specialDeals.forEach((p) => {
+    const col = document.createElement("div");
+    col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+
+    // Inject card HTML using Bootstrap classes
+    //content of the card
+    col.innerHTML = `
+        
+        
+             
+        
+        
+            <div class="col-md-8 mb-4">
+                <div class="card">
+               
+                <img src="${p.image}" class="card-img-top" alt="${p.review}">
+               
+                 <div class="card-body">
+                    <h5 class="card-title" >
+                    ${p.name} - ${p.price}
+                    </h5>
+                  
+                    
+                    
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    
+                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}', 'specialDeals')">More Info</button>
+               
+               <div id='${p.name}-${p.price}' style="display:none">
+              
+               
+               </div>   
+                    
+                  </div>
+                </div>
+              </div>
+      
+           
+           `
+
+    // Add the card to the grid
+    grid3.appendChild(col)
+  })
+}
+
+);
+
+
