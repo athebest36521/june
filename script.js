@@ -81,20 +81,20 @@ let TopItems = [
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch plane with wheels and wings."
   },
-    {
+  {
     name: "Boat",
     price: '$999999999.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch boat with mast, boom, and sail."
   },
-    {
+  {
     name: "Blocks",
     price: '$99,999,999,999,999,999,999,999.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/blocks1.jpg",
     description: "Handcrafted birch blocks for playtime anytime!"
   }
-  
-  
+
+
 ]
 
 
@@ -158,14 +158,14 @@ form.addEventListener("submit", function (e) {
 //   /*
 //   if (s=="about" || s == "contact" ||s=="home" ||  s=="shop" ){
 //     var pg=  "https://junetoycompfinal.glitch.me/"  + s + ".html" ;
-    
+
 //     window.location.href=pg;
 //   }
 //     //otherwise, tell the user that the page does not exist.
 //   else{
-  
+
 //     alert("404 This Page Doesn't Exist");
-  
+
 //   }
 //   */
 // }
@@ -255,13 +255,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Could not find #topItems in the DOM.");
     return;
   }
-  
-  grid2.innerHTML=""
-  
-  
+
+  grid2.innerHTML = ""
+
+
   TopItems.forEach((p) => {
     const col = document.createElement("div");
-  
+
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
     // Inject card HTML using Bootstrap classes
@@ -299,9 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   </div>
                 </div>
               </div> `
-    
-    
-   grid2.appendChild(col)
+
+
+    grid2.appendChild(col)
   })
 });
 
@@ -325,7 +325,7 @@ function seeMore(productID) {
 
   // Show the Bootstrap modal
   const modal = new bootstrap.Modal(document.getElementById("modal"));
-  modal.show(FeatureProducts);
+  modal.show();
 }
 
 
@@ -423,7 +423,7 @@ function morereviews(reviewID) {
     console.error("Review not found!");
     return;
   }
-  
+
   document.getElementById("title").textContent = `${review.name} ${review.rating}`;
   document.getElementById("description").textContent = `${review.review}`;
 
@@ -431,5 +431,5 @@ function morereviews(reviewID) {
   const modal = new bootstrap.Modal(document.getElementById("modal"));
   modal.show(FeatureProducts);
 
-  
+
 }
