@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     
                     
-                    <button class="btn btn-primary" onClick="seeMore('${p.name}-${p.price}', 'featureProducts)">More Info</button>
+                    <button class="btn btn-primary" onClick="seeMore('${p.name}-${p.price}', 'featureProducts')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-text">
                       ${p.price}
                     </p>
-                   <button class="btn btn-primary" onClick="topItems"('${p.name}-${p.price}', 'featureProducts)">More Info</button>
+                   <button class="btn btn-primary" onClick="topItems"('${p.name}-${p.price}', 'featureProducts')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
