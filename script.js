@@ -42,25 +42,25 @@ let FeatureProducts = [
 let reviews = [
   {
     name: "Samantha S.",
-    image: "...",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/5star.webp",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
     name: "Martha G.",
-    image: "...",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/5star.webp",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
     name: "Andrew T.",
-    image: "...",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/5star.webp",
     review: "Beautiful craftsmanship!",
     rating: 5
   },
   {
-    name: "Samuel I.",
-    image: "...",
+    name: "Samuel G.",
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/5star.webp",
     review: "Beautiful craftsmanship!",
     rating: 5
   }
@@ -71,26 +71,26 @@ let reviews = [
 let TopItems = [
   {
     name: "Car",
-    price: "$9.99",
+    price: "$5.99",
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/car1.jpg",
     description: "Handcrafted birch car with wheels."
   },
   {
     name: "Plane",
-    price: '$199.99',
+    price: '$10.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch plane with wheels and wings."
   },
   {
     name: "Boat",
-    price: '$999999999.99',
+    price: '$20.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/boat1.jpg",
     description: "Handcrafted birch boat with mast, boom, and sail."
   },
   {
     name: "Blocks",
-    price: '$99,999,999,999,999,999,999,999.99',
-    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/blocks1.jpg",
+    price: '$25.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block1.jpg",
     description: "Handcrafted birch blocks for playtime anytime!"
   }
 
@@ -102,30 +102,29 @@ let TopItems = [
 let specialDeals = [
   {
     name: "Car",
-    price: "$9.99",
+    price: "$5.99",
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/car1.jpg",
     description: "Handcrafted birch car with wheels."
   },
   {
     name: "Plane",
-    price: '$199.99',
+    price: '$10.99',
     image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
     description: "Handcrafted birch plane with wheels and wings."
   },
   {
     name: "Boat",
-    price: '$999999999.99',
-    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/plane1.jpg",
+    price: '$20.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/boat1.jpg",
     description: "Handcrafted birch boat with mast, boom, and sail."
   },
   {
     name: "Blocks",
-    price: '$99,999,999,999,999,999,999,999.99',
-    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/blocks1.jpg",
+    price: '$25.99',
+    image: "Little Bird Toy Co Site Photos-20250605T224935Z-1-001/imgs/block1.jpg",
     description: "Handcrafted birch blocks for playtime anytime!"
   }
 ]
-
 
 
 // const form = document.getElementById("form");
@@ -247,9 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     
                     
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    
-                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}', 'featureProducts')">More Info</button>
+                    <button class="btn btn-primary" onClick="seeMore('${p.name}-${p.price}', 'topItems')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
@@ -305,12 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-text">
                       ${p.price}
                     </p>
-                    
-                    
-                    
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    
-                   <button class="btn-warning" onClick="seeMore('${p.name}-${p.price}', 'topItems')">More Info</button>
+                   <button class="btn btn-primary" onClick="seeMore('${p.name}-${p.price}', 'topItems')">More Info</button>
                
                <div id='${p.name}-${p.price}' style="display:none">
                
@@ -416,10 +408,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     
                     
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <button class="btn btn-primary" onClick="seeMore('${p.name}-${p.price}', 'topItems')">More Info</button>
                     
-                   <button class="btn-warning" onClick="morereviews('${p.review}-${p.rating}')">More Info</button>
-               
+                   
                <div id='${p.review}-${p.rating}' style="display:none">
                
               
@@ -525,7 +516,4 @@ document.addEventListener("DOMContentLoaded", () => {
     grid3.appendChild(col)
   })
 }
-
 );
-
-
